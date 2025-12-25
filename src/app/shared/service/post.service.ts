@@ -16,4 +16,19 @@ export class PostService {
   fetChAllphotos():Observable<Iphoto[]>{
   return this._http.get<any>(this.Base_url)
   }
+
+  cretePost(post:Iphoto):Observable<Iphoto>{
+  return this._http.post<Iphoto>(this.Base_url, post)
+  }
+
+  updatepost(post:Iphoto):Observable<Iphoto>{
+    let updateUrl = `${this.Base_url}/${post.id}`;
+
+    return this._http.patch<Iphoto>(updateUrl, post);
+  }
+
+  removePost(post:Iphoto):Observable<Iphoto>{
+   let reoveUrl=`${this.Base_url}/${post.id}`;
+   return this._http.delete<Iphoto>(reoveUrl)
+  }
 }
