@@ -1,0 +1,17 @@
+  <div class="container">
+     <div class="row mb-4">
+        <div class="col-12 text-center">
+               <button mat-mini-fab color="primary" (click)="openMovieForm()">
+                
+                <mat-icon> add</mat-icon>
+              </button>
+        </div>
+      
+     </div>
+     <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <app-moviecard [movie]="movieObj" *ngFor="let movieObj of movieArr" (deletd)="onMovieDelete($event)"></app-moviecard>
+        </div>
+       
+     </div>
+  </div>

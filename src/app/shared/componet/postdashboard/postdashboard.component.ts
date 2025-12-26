@@ -26,9 +26,14 @@ export class PostdashboardComponent implements OnInit {
     this._postService.fetChAllphotos()
     .subscribe({
      next:res=>{
-       console.log(res)
+       if(res){
+        setTimeout(()=>{
+          console.log(res)
        this.photoArr=res
-
+      
+        }, 0)
+       }
+       
 
      },
      error:err=>{
@@ -50,8 +55,10 @@ export class PostdashboardComponent implements OnInit {
             console.log(res)
 
             if(res){
-                 this.photoArr.unshift(res)
+                setTimeout(() => {
+            this.photoArr.unshift(res)
             this._snackabar.openSnackbar(`This ${res.title} added succesfully.`)
+            }, 0);
             }
            
           }

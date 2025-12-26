@@ -17,6 +17,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { NavbarComponent } from './shared/componet/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { LoaderInterceptor } from './loader.interceptor';
+import { MovieDashoboardComponent } from './shared/componet/movie-dashoboard/movie-dashoboard.component';
+import { MoviecardComponent } from './shared/componet/moviecard/moviecard.component';
+import { MovieFormComponent } from './shared/componet/movie-form/movie-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,10 @@ import { LoaderInterceptor } from './loader.interceptor';
     PostComponent,
     PostformComponent,
     GetcponfirmComponent,
-    NavbarComponent
+    NavbarComponent,
+    MovieDashoboardComponent,
+    MoviecardComponent,
+    MovieFormComponent
   ],
   imports: [
     BrowserModule,

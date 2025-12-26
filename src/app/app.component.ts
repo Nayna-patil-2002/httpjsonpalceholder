@@ -10,19 +10,19 @@ export class AppComponent implements OnInit{
   
   title = 'httpservice';
 
-  isLoading:boolean=false;
+  // isLoading:boolean=false;
 
   constructor(
     private _loader:LoaderService
   ){}
    
-  loading$ = this._loader.LoadingStatusObj$;
+     loading$ = this._loader.LoadingStatusObj$; 
   ngOnInit(): void {
     // this._loader.LoadingStatusObj$
     //  .subscribe(res=>{
     //   this.isLoading=res
     //  })
 
-  
+
   }
 }
